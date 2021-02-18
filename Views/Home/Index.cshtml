@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IQueryable<Book>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Rubicon</h1>
+</div>
+
+@* I will style this more in the future :) *@
+<div class="mt-3">
+    <table id="books">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author First Name</th>
+                <th>Author Last Name</th>
+                <th>Publisher</th>
+                <th>ISBN</th>
+                <th>Classification</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Book b in Model)
+            {
+                @:<tr>
+                    <td>@b.Title</td>
+                    <td>@b.AuthorFirstName</td>
+                    <td>@b.AuthorLastName</td>
+                    <td>@b.Publisher</td>
+                    <td>@b.ISBN</td>
+                    <td>@b.Classification</td>
+                    <td>@b.Category</td>
+                    <td>$@b.Price</td>
+                @:</tr>
+            }
+        </tbody>
+    </table>
+</div>
