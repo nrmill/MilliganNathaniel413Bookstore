@@ -2,29 +2,29 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model IQueryable<Book>
+@model BookListViewModel
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Rubicon</h1>
 </div>
 
-@* I will style this more in the future :) *@
 <div class="mt-3">
-    <table id="books">
+    <table class="table table-striped table-hover align-middle">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Author First Name</th>
-                <th>Author Last Name</th>
-                <th>Publisher</th>
-                <th>ISBN</th>
-                <th>Classification</th>
-                <th>Category</th>
-                <th>Price</th>
+                <th style="width: 15%">Title</th>
+                <th style="width: 15%">Author First</th>
+                <th style="width: 15%">Author Last</th>
+                <th style="width: 7%">Publisher</th>
+                <th style="width: 15%">ISBN</th>
+                <th style="width: 7%">Classification</th>
+                <th style="width: 7%">Category</th>
+                <th style="width: 7%">Price</th>
+                <th style="width: 12%"># of Pages</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (Book b in Model)
+            @foreach (Book b in Model.Books)
             {
                 @:<tr>
                     <td>@b.Title</td>
@@ -32,11 +32,22 @@
                     <td>@b.AuthorLastName</td>
                     <td>@b.Publisher</td>
                     <td>@b.ISBN</td>
-                    <td>@b.Classification</td>
+                    <td>
+                        <div class="badge badge-pill badge-primary m-1">@b.Classification</div>
+                    </td>
                     <td>@b.Category</td>
-                    <td>$@b.Price</td>
+                    <td>
+                        <span class="small">$@b.Price</span>
+                    </td>
+                    <td>@b.NumPages</td>
                 @:</tr>
             }
         </tbody>
     </table>
+    
+    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+         page-class-normal="btn-outline-dark"
+         page-class-selected="btn-primary"
+         class="btn-group pull-right m-1"
+     ></div>
 </div>
