@@ -1,0 +1,17 @@
+﻿@model Book
+
+<tr>
+    <td>@Model.Title</td>
+    <td>@Model.AuthorFirstName</td>
+    <td>@Model.AuthorLastName</td>
+    <td>@Model.Publisher</td>
+    <td>@Model.ISBN</td>
+    <td>
+        <div class="badge badge-pill badge-primary m-1">@Model.Classification</div>
+    </td>
+    <td>@Model.Category</td>
+    <td>
+        <span class="small">$@Model.Price</span>
+    </td>
+    <td>@Model.NumPages</td>
+</tr>

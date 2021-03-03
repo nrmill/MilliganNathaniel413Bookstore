@@ -63,15 +63,27 @@ namespace MilliganNathaniel413Bookstore
                 //    name: "default",
                 //    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
-                    "pagination",
-                    "p{page}",
+                    "catpage",
+                    "{category}/p{page:int}",
                     new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    "pagination",
+                    "p{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    "page",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+                
 
                 endpoints.MapDefaultControllerRoute();
             });
 
             //commented out after first run of app (that first run with this line sets up the seed data in the database)
             //used again after updating seed data with NumPages and adding new books
+            //used again after updating seed data with appropriate Classification and Category
             //SeedData.EnsurePopulated(app);
         }
     }
