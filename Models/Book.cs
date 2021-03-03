@@ -19,6 +19,7 @@ namespace MilliganNathaniel413Bookstore.Models
         public string Classification { get; set; }
         public string Category { get; set; }
         public float Price { get; set; }
+        public int NumPages { get; set; }
 
     }
 }
