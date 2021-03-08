@@ -23,6 +23,8 @@ namespace MilliganNathaniel413Bookstore.Models
             //I only changed the titles because I knew this assignment wasn't about if I could copy and paste 10 books' details
             //I will copy over the rest of the details for future assignments if needed though :)
             //added number of pages for assignment 6
+            //added three additional books for assignment 6
+            //updated Category and Classification for assignment 7
             if (!context.Books.Any())
             {
                 context.Books.AddRange(
@@ -45,8 +47,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 9.95f,
                         NumPages = 944
                     },
@@ -57,8 +59,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 9.95f,
                         NumPages = 832
                     },
@@ -69,8 +71,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
                         Price = 9.95f,
                         NumPages = 864
                     },
@@ -81,8 +83,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Historical",
                         Price = 9.95f,
                         NumPages = 528
                     },
@@ -94,7 +96,7 @@ namespace MilliganNathaniel413Bookstore.Models
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
-                        Category = "Classic",
+                        Category = "Historical Fiction",
                         Price = 9.95f,
                         NumPages = 288
                     },
@@ -105,8 +107,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Self-Help",
                         Price = 9.95f,
                         NumPages = 304
                     },
@@ -117,8 +119,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Self-Help",
                         Price = 9.95f,
                         NumPages = 240
                     },
@@ -129,8 +131,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Business",
                         Price = 9.95f,
                         NumPages = 400
                     },
@@ -142,7 +144,7 @@ namespace MilliganNathaniel413Bookstore.Models
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
-                        Category = "Classic",
+                        Category = "Thrillers",
                         Price = 9.95f,
                         NumPages = 642
                     },
@@ -154,7 +156,7 @@ namespace MilliganNathaniel413Bookstore.Models
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
-                        Category = "Classic",
+                        Category = "Biography",
                         Price = 9.95f,
                         NumPages = 123
                     },
@@ -165,7 +167,7 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
+                        Classification = "Non-Fiction",
                         Category = "Classic",
                         Price = 9.95f,
                         NumPages = 234
@@ -177,8 +179,8 @@ namespace MilliganNathaniel413Bookstore.Models
                         AuthorLastName = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
+                        Classification = "Non-Fiction",
+                        Category = "Thrillers",
                         Price = 9.95f,
                         NumPages = 345
                     }
