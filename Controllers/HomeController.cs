@@ -28,6 +28,7 @@ namespace MilliganNathaniel413Bookstore.Controllers
             return View(new BookListViewModel
             {
                 Books = _repository.Books
+                    .Where(b => category == null || b.Category == category)
                     .OrderBy(b => b.BookId)
                     .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize)
@@ -36,8 +37,9 @@ namespace MilliganNathaniel413Bookstore.Controllers
                 {
                     CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
-                    TotalNumItems = _repository.Books.Count()
-                }
+                    TotalNumItems = category == null ? _repository.Books.Count() : _repository.Books.Where(b => b.Category == category).Count()
+                },
+                CurrentCategory = category
             });
         }
 

@@ -85,6 +85,12 @@ namespace MilliganNathaniel413Bookstore
                     "p{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
+                endpoints.MapControllerRoute(
+                    "page",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+                
+
                 endpoints.MapDefaultControllerRoute();
 
                 //allows use of Razor Pages
